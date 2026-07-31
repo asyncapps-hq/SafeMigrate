@@ -1,0 +1,30 @@
+name: 'SafeMigrate'
+description: 'Shadow-test Postgres migrations, emit schema diff and rollback SQL.'
+author: 'KhyFee'
+branding:
+  icon: 'database'
+  color: 'green'
+inputs:
+  mode:
+    description: 'migrate | demo'
+    default: 'migrate'
+  migrations-dir:
+    description: 'Path to SQL migrations'
+    default: 'migrations'
+  baseline:
+    description: 'Baseline schema SQL path'
+    required: false
+  seed:
+    description: 'Seed SQL path'
+    required: false
+  step:
+    description: 'Per-migration timeline'
+    default: 'false'
+outputs:
+  grade:
+    description: 'Risk grade A-F'
+  artifact-dir:
+    description: 'Path to .safemigrate artifacts'
+runs:
+  using: 'node20'
+  main: 'packages/action/dist/main.js'

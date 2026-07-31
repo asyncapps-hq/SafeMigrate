@@ -1,0 +1,27 @@
+{
+  "name": "@khyfee/safemigrate",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "SafeMigrate CLI — Docker Postgres migration sandbox with rollback SQL",
+  "bin": { "safemigrate": "./dist/cli.js" },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "node --import tsx --test src/**/*.test.ts",
+    "demo": "tsx src/cli.ts demo",
+    "doctor": "tsx src/cli.ts doctor"
+  },
+  "dependencies": {
+    "@safemigrate/core": "*",
+    "@safemigrate/docker": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  },
+  "author": "KhyFee (https://github.com/KhyFee)",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "https://github.com/KhyFee/SafeMigrate.git" }
+}
