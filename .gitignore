@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.next/
+.safemigrate/
+coverage/
+.env
+.env.local
+*.log
+.DS_Store
+*.tsbuildinfo
+*.pem
+*.tgz

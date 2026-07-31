@@ -1,0 +1,19 @@
+{
+  "name": "safemigrate",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Zero-Downtime Migration Sandbox — Docker Postgres shadow clone, schema diff, rollback SQL",
+  "workspaces": ["apps/*", "packages/*"],
+  "scripts": {
+    "build": "npm run build -w @safemigrate/core && npm run build -w @safemigrate/docker && npm run build -w @khyfee/safemigrate && npm run build -w @safemigrate/action && npm run build -w @safemigrate/web",
+    "test": "npm run build -w @safemigrate/core && npm run build -w @safemigrate/docker && npm run build -w @khyfee/safemigrate && npm run test -w @safemigrate/core && npm run test -w @safemigrate/docker && npm run test -w @khyfee/safemigrate && npm run test -w @safemigrate/action",
+    "demo": "npm run demo -w @khyfee/safemigrate",
+    "doctor": "npm run doctor -w @khyfee/safemigrate",
+    "dev:web": "npm run dev -w @safemigrate/web"
+  },
+  "engines": { "node": ">=20" },
+  "author": "KhyFee (https://github.com/KhyFee)",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "https://github.com/KhyFee/SafeMigrate.git" },
+  "homepage": "https://github.com/KhyFee/SafeMigrate#readme"
+}

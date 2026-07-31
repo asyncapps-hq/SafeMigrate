@@ -1,0 +1,7 @@
+fail-on: destructive
+allow-destructive: false
+require-expand-contract: true
+ignored-tables: []
+shadow-port: 55432
+postgres-image: postgres:16-alpine
+seed: true
